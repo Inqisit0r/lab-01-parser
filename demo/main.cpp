@@ -1,5 +1,28 @@
-#include <example.hpp>
+#include "../include/header.hpp"
 
-int main() {
-  example();
+using namespace std;
+
+using json = nlohmann::json;
+
+int main(int argc, char* argv[])
+{
+  string filePath = "asd";
+  if (argc <= 1)
+  {
+    cout << "Invalid params" << endl;
+    return SSP_STATUS_EMPTY_PARAMETR;
+  }
+  else
+  {
+    filePath = (string)argv[1];
+    if (!std::filesystem::exists(filePath))
+    {
+      cout << "File does not exists" << endl;
+      return SSP_STATUS_ERROR;
+    }
+  }
+
+  stringstream ss;
+  formatPrint(filePath, ss);
+  cout << ss.str() << endl;
 }
