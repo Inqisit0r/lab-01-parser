@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "name": "Akakiy Akaki",
+      "group": "UI8-32",
+      "avg": "5.25",
+      "debt": null
+    },
+    {
+      "name": "Ded Asambler",
+      "group": 32,
+      "avg": 3.75,
+      "debt": "asembler"
+    }
+  ],
+  "_meta": {
+    "count": 2
+  }
+}
