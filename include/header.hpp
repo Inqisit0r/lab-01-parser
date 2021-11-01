@@ -45,6 +45,6 @@ std::any getAvg(const nlohmann::json* j);
 
 std::any getDebt(const nlohmann::json* j);
 
-bool formatPrint(const std::string path, std::ostream& os);
+bool formatPrint(const nlohmann::json* j, std::ostream& os);
 
 #endif // INCLUDE_HEADER_HPP_

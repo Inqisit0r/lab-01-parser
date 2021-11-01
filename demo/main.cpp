@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
     }
   }
 
-  stringstream ss;
-  formatPrint(filePath, ss);
-  cout << ss.str() << endl;
+//  stringstream ss;
+//  formatPrint(filePath, ss);
+//  cout << ss.str() << endl;
 }

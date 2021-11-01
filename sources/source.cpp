@@ -161,17 +161,13 @@ std::any getDebt(const json* j)
   }
 }
 
-bool formatPrint(const std::string path, std::ostream& os) {
-  std::stringstream ss;
-  std::ifstream f(path);
-  json j = json::parse(f);
-
+bool formatPrint(const nlohmann::json* j, std::ostream& os) {
   std::string str = "";
   int int_temp = 0;
   float float_temp = 0;
   json temp;
   std::any key;
-  if (!meta_checker(&j))
+  if (!meta_checker(j))
   {
     os << "Meta doesn\'t equal students count" << std::endl;
     return false;
@@ -181,7 +177,7 @@ bool formatPrint(const std::string path, std::ostream& os) {
   << std::setw(10) << std::left << "   group" << "|"
   << std::setw(11) << std::left << "    avg" << "|"
   << std::setw(10) << std::left << "   debt" << "|" << std::endl;
-  for (auto& iter : j.at("items").items())
+  for (auto& iter : j->at("items").items())
   {
     temp = iter.value();
     os << "|" + std::string(20, '-') + "|" + std::string(10, '-') + "|"
