@@ -22,8 +22,4 @@ int main(int argc, char* argv[])
       return SSP_STATUS_ERROR;
     }
   }
-
-//  stringstream ss;
-//  formatPrint(filePath, ss);
-//  cout << ss.str() << endl;
 }
