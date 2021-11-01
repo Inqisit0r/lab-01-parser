@@ -60,7 +60,7 @@ if(BUILD_TESTS)
             ${CMAKE_CURRENT_SOURCE_DIR}/tests/jsons
             $<TARGET_FILE_DIR:tests>
             )
-    add_definitions("-DJSON_PATH=\"${CMAKE_SOURCE_DIR}/tests/jsons/\"")
+    add_definitions("-DJSON_PATH=\"${CMAKE_SOURCE_DIR}//tests//jsons//\"")
     enable_testing()
     add_test(NAME unit_tests COMMAND tests)
 endif()
