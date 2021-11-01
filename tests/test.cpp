@@ -13,7 +13,7 @@ using json = nlohmann::json;
 TEST(printTest, json)
 {
   stringstream ss;
-  string path = "..//jsonExamples//students.json";
+  string path = "../jsonExamples/students.json";
   formatPrint(path, ss);
   ASSERT_EQ("|         name       |   group  |    avg    |   debt   |\n"
       "|--------------------|----------|-----------|----------|\n"
